@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jonathan Veit - Sole Developer - @jonathanveit
 
 # THANKS
 

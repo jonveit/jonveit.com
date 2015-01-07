@@ -731,6 +731,22 @@ footer img {
 	.education {
 		width: 50%;
 	}
+
+	#testimonials a {
+		color: #EEE;
+	}
+
+	#testimonials a:hover {
+		color: #FFF;
+	}
+
+	#testimonials blockquote {
+		width: 60%;
+
+		margin: 0 auto;
+		margin-top: 0.5em;
+
+	}
 }
 
 
