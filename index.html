@@ -12,10 +12,299 @@
 	<meta name="google-site-verification" content="ChVgj2iH2tMA6iUKR0kwRr-m_9UhPNYgFS3Vsma6m7c" />
 	<meta name="keywords" content="web design philadelphia, jon veit, web development, database development, database design">
 
-	<link type="text/css" rel="stylesheet" href="css/normalize.css" />
-	<link type="text/css" rel="stylesheet" href="css/main.css" />
-	<link  type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-	<link type="text/css"  rel="stylesheet" href="css/lightbox.css" />
+	<style>
+
+	#wrap {
+		background-color: #FFF;
+	}
+
+	.innerwrap {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.column-three, .column-two {
+		width: 100%;
+	}
+
+	.hidden-xs {
+		display: none;
+	}
+
+	.btn {
+	  background: #99635a;
+	  background-image: -webkit-linear-gradient(top, #99635a, #362320);
+	  background-image: -moz-linear-gradient(top, #99635a, #362320);
+	  background-image: -ms-linear-gradient(top, #99635a, #362320);
+	  background-image: -o-linear-gradient(top, #99635a, #362320);
+	  background-image: linear-gradient(to bottom, #99635a, #362320);
+	  -webkit-border-radius: 10;
+	  -moz-border-radius: 10;
+	  border-radius: 10px;
+	  font-family: Arial;
+	  color: #ffffff;
+	  font-size: 0.8em;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+	  border: #FFF;
+	}
+
+	.btn:hover {
+		background: #99635a;
+		background-image: -webkit-linear-gradient(top, #99635a, #66423c);
+		background-image: -moz-linear-gradient(top, #99635a, #66423c);
+		background-image: -ms-linear-gradient(top, #99635a, #66423c);
+		background-image: -o-linear-gradient(top, #99635a, #66423c);
+		background-image: linear-gradient(to bottom, #99635a, #66423c);
+		text-decoration: none;
+	}
+
+	.well {
+	  background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
+	  background-image:      -o-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
+	  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#f5f5f5));
+	  background-image:         linear-gradient(to bottom, #e8e8e8 0%, #f5f5f5 100%);
+	  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
+	  background-repeat: repeat-x;
+	  border-color: #dcdcdc;
+	  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
+	  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
+	}
+
+	.vertical-align {
+		display: inline-block;
+		vertical-align: middle;
+		border: 1px solid black;
+	}
+
+	header {
+		position: fixed;
+		top: 0;
+		background-color: rgba(76,120,107,0.95);
+		height: auto;
+		width: 100%;
+		overflow: auto;
+	}
+
+	header img {
+		float: left;
+		height: 2em;
+		padding: 1em;
+	}
+
+	header h1 {
+
+		display: block;
+
+		float: left;
+
+		width: auto;
+
+
+
+		font-size: 1.6em;
+
+		color: #FFF;
+	}
+
+	section {
+		margin: 0px;
+		padding: 2em 0;
+		overflow: auto;
+
+
+	}
+
+	section h2 {
+		font-size: 1.5em;
+		text-align: center;
+		margin: 0;
+	}
+
+	section h3 {
+		width: 92%;
+		margin: 0 auto;
+	}
+
+	section p {
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#offcanvas {
+		display: block;
+
+		float: right;
+
+		width: 32px;
+		height: 32px;
+
+		margin: 1em;
+
+		background-image: url("../img/navicon.png");
+		border: none;
+	}
+
+	#offcanvas:focus,
+	#offcanvas:selected {
+		border: none;
+	}
+
+	#padding {
+		height: 88px;
+	}
+
+	#banner {
+		padding-top: 1em;
+		overflow: auto;
+
+	}
+
+	#banner h2 {
+		margin: 0 1em;
+	}
+
+	#banner img {
+		display: block;
+
+		width: 70%;
+		max-width: 300px;
+		max-height: 300px;
+
+		margin: 0 auto;
+		padding-right: 5%;
+
+	}
+
+	#banner input {
+		display: block;
+		margin: 0 auto;
+	}
+
+	#iconrow {
+		padding: 2em 0;
+	}
+
+	#iconrow div {
+		height: 225px;
+		width: 80%;
+		max-width: 440px;
+		margin: 0 auto;
+		margin-bottom: 2em;
+		padding-top: 2em;
+
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+
+	#iconrow img {
+		display: block;
+
+		width: 100px;
+		height: 100px;
+
+		margin: 0 auto;
+	}
+
+	#iconrow p {
+		margin: 0.7em 0.8em;
+
+		text-align: center;
+	}
+
+	@media all and (min-width: 43em) {
+
+	.pullleft {
+		float: left;
+	}
+
+	.pullright {
+		float: right;
+	}
+
+	.hidden-xs {
+		display: block;
+	}
+
+	#offcanvas {
+		display: none;
+	}
+
+	h2 {
+		margin-left: 2em;
+	}
+
+	nav {
+		position: relative;
+		display: block;
+		float: right;
+		margin-right: 1em;
+		font-size: 0.8em;
+	}
+
+	nav li {
+		float: left;
+	}
+
+	nav a {
+		text-decoration: none;
+		display: block;
+		padding: 1em;
+		color: rgba(255,255,255,0.7);
+		height: 100%;
+		margin-top: -0.4em;
+	}
+
+	nav a:hover,
+	nav a:focus {
+		color: #FFF;
+		border: 0;
+		outline: none;
+	}
+
+	nav a .active {
+		color: #FFF;
+		border: 0;
+		outline: none;
+		text-decoration: underline;
+	}
+
+	#banner {
+		padding-top: 2em;
+	}
+
+	#banner h2 {
+		font-size: 1.6em;
+	}
+
+	#iconrow {
+
+		margin: 0 auto;
+	}
+
+	#iconrow div {
+		display: block;
+
+		float: left;
+
+		width: 29.333%;
+
+		margin-right: 2%;
+	}
+
+	#iconrow div:first-child {
+		margin-left: 4%;
+	}
+
+	#iconrow div:last-child {
+		margin-right: 4%;
+	}
+
+	}
+
+	</style>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 </head>
@@ -57,6 +346,11 @@
 		<div class="column-three well"> <img src="img/lightbulb-logo.png" alt="LightBulb Icon" /> <p> Guidance on the use of technology for your project or business.  Can produce creative written or graphic content </p> </div>
 	</div>
 	
+	<link type="text/css" rel="stylesheet" href="css/normalize.css" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+	<link  type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+	<link type="text/css"  rel="stylesheet" href="css/lightbox.css" />
+
 	<section id="about">
 		<div class="innerwrap">
 			<h2> About Me </h2>
@@ -178,7 +472,7 @@
 			<h2> Testimonials </h2>
 			<div> <img src="img/testimonials/testimony2.jpg" alt="Picture of Shantih Brando" /> <p> Shantih Brando, Owner of <a href="http://www.insideouthome.biz" target="_blank"> InsideOut Home Solutions </a> </p> <blockquote> <em> "Working with Jonathan Veit has been such a pleasure! He has completely transformed my company's website with great ideas, skillful presentation and really great attention to detail. Jon is extremely responsive, which is great since I email him at all hours of the day and night. And I appreciate his collaborative nature; he often emails me with ideas for changes to the site! I couldn't ask for a better web designer to enhance my business profile." </em></blockquote></div>
 			<div> <img src="img/testimonials/testimony1.jpg" alt="Picture of Sue Wolfe" /> <p> Sue Wolfe, Business Owner and Founder of non-profit feral cat program, <a href="http://www.catcrew.org" target="_blank">Cat Crew</a> </p><blockquote> <em>"Jon took over the management of our non-profit animal rescue website and transformed it into an easy-to-navigate, professional design.  He made the changes I asked for, clearing the clutter and making the website a pleasure to browse.  I was impressed by his creativity and fast response, which continue as we change and update data on a regular basis.  He has remained our website manager thanks to his talent and technical knowledge."</em></blockquote> </div>
-			<div> <img src="img/testimonials/testimony3.jpg" alt="Picture of Michelle Wildenhaus" /> <p> Michelle Wildenhaus, Owner and Sales Manager of <a href="http://www.studiotwist.net" target="_blank">Studio Twist </a></p> <blockquote> <em> "JV has built a system for administration of our custom sample order entry system, shipping, and yarn inventory.  Due to the custom nature of our business at Studio Twist, this has been an invaluable tool in our growing business.  JV has also trained our sales force on the system, and has been readily available for trouble shooting and additional training as needed.  We would definitely recommend his services." </em> </blockquote>
+			<div> <img src="img/testimonials/testimony3.jpg" alt="Picture of Michelle Wildenhaus" /> <p> Michelle Wildenhaus, Owner and Sales Manager of <a href="http://www.studiotwist.net" target="_blank">Studio Twist </a></p> <blockquote> <em> "JV has built a system for administration of our custom sample order entry system, shipping, and yarn inventory.  Due to the custom nature of our business at Studio Twist, this has been an invaluable tool in our growing business.  JV has also trained our sales force on the system, and has been readily available for trouble shooting and additional training as needed.  We would definitely recommend his services." </em> </blockquote></div>
 		</div>
 	</section>
 	
@@ -189,11 +483,11 @@
 				<h3>or</h3>
 				<h3> Send Me a Message </h3>
 			
-				<form id="messageForm" action="/">
-					<input type='text' name='message_name' placeholder="Your Name">
-					<input type='text' name='message_email' placeholder="Your E-Mail Address" >
-					<input type='text' name='message_subject' placeholder='Subject Line'>
-					<textarea name='message_message' placeholder="Enter Your Message Here"> </textarea>
+				<form id="messageForm">
+					<input type='text' name='name' placeholder="Your Name">
+					<input type='text' name='email' placeholder="Your E-Mail Address" >
+					<input type='text' name='subject' placeholder='Subject Line'>
+					<textarea name='message' placeholder="Enter Your Message Here"> </textarea>
 					<input class="btn" type='submit' value="Send Message" />
 				</form>
 				
@@ -258,29 +552,18 @@
 			
 			event.preventDefault();
 			
-			var $form = $( this ),
-				message_name = $form.find("input[name='message_name']").val(),
-				message_email = $form.find("input[name='message_email']").val(),
-				message_subject = $form.find("input[name='message_subject']").val(),
-				message_message = $form.find("textarea[name='message_message']").val();
+			$("#messageForm input[type=submit]").val("Sending...");
 			
-			var posting = $.post('email.php', { fullname: message_name, email: message_email, subject: message_subject, message: message_message });
-			
-			posting.done(function( data ) {
-				alert("Message Sent!")
-				$("#messageForm").reset();
-			});	
-			
-			posting.fail( function(data) {
-				alert("Message Failed to Send!");
+			$.post("email.php", $("#messageForm").serialize(), function(data) {
+				alert("E-mail Sent Successfully");
+				$("#messageForm")[0].reset();
+			}).fail( function() {
+				alert("E-mail Script Failed.  Please contact webmaster");
+			}).always( function() {
+				$("#messageForm input[type=submit]").val("Send Message");
 			});
 		});
-		
-		$("#api").click( function( event ) {
-			
-			event.preventDefault();
-			alert("API Resources has not launched its website just yet.  Please click on the screenshot to get an idea of the website.");
-		});
+
    	});
 	
 </script>
