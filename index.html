@@ -307,6 +307,14 @@
 	</style>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Code meant for auto-reloading in VirtualHostX -->
+	<script type="text/javascript">
+		var connection = new WebSocket('ws://localhost:62183');
+		connection.onmessage = function (e) {
+			location.reload();
+		};
+	</script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -373,15 +381,49 @@
 	<section id="portfolio">
 		<div class="innerwrap">
 			<h2> Portfolio </h2>
-				<h3> Websites </h3>
+				<h3 style="font-size: 1.4em"> Web Applications </h3>
 				<div class="example">
 					<div>
-						<h4>API-Resources.com</h4>
-						<p>Utilizing wix.com for rapid development, I developed this website using a pre-established template.  To customize, I created a logo, unique slider images and custom written content for the pages.  This page also utilizes my php project SimpleWall (see <a class="nav_btn" href="#simplewall">below</a>) to provide news updates. </p>
+						<h4> StudioTwist Database </h4>
+						<p> I utilized Filemaker to create a company-wide database and interface for the work-flow process and record keeping of sales and manufacturing for this apparel design firm.  Using the Instant Web Publishing features of Filemaker, sales team members were able to make requests, view shipping records, store contacts and access company colors and patterns from across the nation simply through their web browser.  Try it out by logging in using username and password, 'guest'.</p>
 					</div>
 					<div>
-						<a href="img/screenshots/api-ss.jpg" data-lightbox="api" data-title="Website for API Resources"><img src="img/screenshots/tb-api-ss.jpg" alt="API Resources Screen Shot" /></a>
-						<form action="http://www.api-resources.com" target="_blank"><input id="api" type="submit" value="Visit Site" class="btn"></form>
+						<a href="img/screenshots/studiotwist-ss.jpg" data-lightbox="studiotwist" data-title="Filemaker Interface for the StudioTwist Database"><img src="img/screenshots/tb-studiotwist-ss.jpg" alt="Screenshot of StudioTwist" /></a>
+						<form action="http://atl-03.fmsdb.com/fmi/iwp/cgi?-db=SAMPLE&amp;-loadframes" target="_blank"><input type="submit" value="Try It" class="btn"></form>
+						<form action="sample.fmp12"><input type="submit" value="Download It" class="btn"></form>
+					</div>
+				</div>
+				<div id="simplewall" class="example">
+					<div>
+						<h4> SimpleWall </h4>
+						<p> To support another project, I constructed a simple web application using PHP and SQL to mimic the functionalities of the facebook wall.  Try it out by using a username and password, 'guest'</p>
+					</div>
+					<div>
+						<a href="img/screenshots/simplewall-ss.jpg" data-lightbox="simplewall" data-title="SimpleWall Web Application"><img src="img/screenshots/tb-simplewall-ss.jpg" alt="Screenshoot of SimpleWall"></a>
+						<form action="http://www.jonveit.com/simplewall" target="_blank"><input type="submit" value="Try It" class="btn"></form>
+						<form action="http://www.github.com/jonveit/simplewall.git"><input type="submit" value="See on GitHub" class="btn"></form>
+					</div>
+				</div>
+				<div id="infos" class="example">
+					<div>
+						<h4> Infos </h4>
+						<p> As an excercise I created a note-taking application. I used bootstrap, PHP and a MySQL database.  Multiple profiles and filter features included.  Try it out using username 'guest' and password 'infosguest123'</p>
+					</div>
+					<div>
+						<a href="img/screenshots/infos-ss.jpg" data-lightbox="infos" data-title="Infos - Note Taking Web Application"><img src="img/screenshots/tb-infos-ss.jpg" alt="Screenshoot of Infos"></a>
+						<form action="http://www.jonveit.com/infos" target="_blank"><input type="submit" value="Try It" class="btn"></form>
+						<form action="http://www.github.com/jonveit/infos.git"><input type="submit" value="See on GitHub" class="btn"></form>
+					</div>
+				</div>
+				<h3 style="font-size: 1.4em"> Websites </h3>
+					<div class="example">
+					<div>
+						<h4>WorkingWhilePlaying.org</h4>
+						<p>As part of my c-op membership working hours I developed a new website for the non-profit, Working While Playing.  I used the CMS drupal and regularly keep it updated.</p>
+					</div>
+					<div>
+						<a href="img/screenshots/wwp-ss.jpg" data-lightbox="working" data-title="Working While Playing"><img src="img/screenshots/tb-wwp-ss.jpg" alt="WorkingWhilePlaying.org Screen Shot" /></a>
+						<form action="http://www.workingwhileplaying.org" target="_blank"><input id="wwp" type="submit" value="Visit Site" class="btn"></form>
 					</div>
 				</div>
 				<div class="example">
@@ -404,28 +446,14 @@
 						<form action="http://www.catcrew.org" target="_blank"><input type="submit" value="Visit Site" class="btn"></form>
 					</div>
 				</div>	
-				
-				<h3> Databases </h3>
 				<div class="example">
 					<div>
-						<h4> StudioTwist </h4>
-						<p> I utilized Filemaker to create a company-wide database and interface for the work-flow process and record keeping of sales and manufacturing for this apparel design firm.  Using the Instant Web Publishing features of Filemaker, sales team members were able to make requests, view shipping records, store contacts and access company colors and patterns from across the nation simply through their web browser.  Try it out by logging in using username and password, 'guest'.</p>
+						<h4>API-Resources.com</h4>
+						<p>Utilizing wix.com for rapid development, I developed this website using a pre-established template.  To customize, I created a logo, unique slider images and custom written content for the pages.  This page also utilizes my php project SimpleWall (see <a class="nav_btn" href="#simplewall">below</a>) to provide news updates. </p>
 					</div>
 					<div>
-						<a href="img/screenshots/studiotwist-ss.jpg" data-lightbox="studiotwist" data-title="Filemaker Interface for the StudioTwist Database"><img src="img/screenshots/tb-studiotwist-ss.jpg" alt="Screenshot of StudioTwist" /></a>
-						<form action="http://atl-03.fmsdb.com/fmi/iwp/cgi?-db=SAMPLE&amp;-loadframes" target="_blank"><input type="submit" value="Try It" class="btn"></form>
-						<form action="sample.fmp12"><input type="submit" value="Download It" class="btn"></form>
-					</div>
-				</div>
-				<div id="simplewall" class="example">
-					<div>
-						<h4> SimpleWall </h4>
-						<p> To support another project, I constructed a simple web application using PHP and SQL to mimic the functionalities of the facebook wall.  Try it out by using a username and password, 'guest'</p>
-					</div>
-					<div>
-						<a href="img/screenshots/simplewall-ss.jpg" data-lightbox="simplewall" data-title="SimpleWall Web Application"><img src="img/screenshots/tb-simplewall-ss.jpg" alt="Screenshoot of SimpleWall"></a>
-						<form action="http://www.jonveit.com/simplewall" target="_blank"><input type="submit" value="Try It" class="btn"></form>
-						<form action="http://www.github.com/jonveit/simplewall.git"><input type="submit" value="See on GitHub" class="btn"></form>
+						<a href="img/screenshots/api-ss.jpg" data-lightbox="api" data-title="Website for API Resources"><img src="img/screenshots/tb-api-ss.jpg" alt="API Resources Screen Shot" /></a>
+						<form action="http://www.api-resources.com" target="_blank"><input id="api" type="submit" value="Visit Site" class="btn"></form>
 					</div>
 				</div>
 		</div>
@@ -436,7 +464,19 @@
 		<div class="innerwrap">
 		<h2> Experience </h2>
 		<div class="experience">
-			<h3 class="pullleft"> Freelance Website Consultant </h3><h4 class="pullright">November 2012-Present</h4>
+			<h3 class="pullleft"> Software Engineer </h3><h4 class="pullright">April 2015 - June 2017</h4>
+			<p> Centrally responsible for the releases of the company's primary software application, the StratIS management app, which allows tablet and browser management of StratIS' "Internet of Things" platform.  Developer and maintainer of both cloud server software in Django/Python and the front-end web/tablet/mobile applications in React/Redux/Javascript.  Designed and developed database and API layers for internet of things platform including distributed processes using Celery tool.  Worked in collaboration with five to eight other developers using git and gerrit code review software.  Participated in and occasionally managed one to two week development sprints using Atlassian Jira.  Led and was responsible for a major data migration effort from previous property management software Nexia and Schlage Express which included the transfer of nearly a 100,000 residential and other units in addition to key, user and assignment information.  </p>
+			<ul> <li> <strong> StratIS </strong>, Philadelphia, PA <a href="http://www.stratisiot.com/" target="_blank"> http://www.stratisiot.com </a></li>
+			</ul>
+		</div>
+		<div class="experience">
+			<h3 class="pullleft"> Web Developer </h3><h4 class="pullright">December 2014 - April 2015</h4>
+			<p> Provided implementations and maintenance for both in-house projects and the websites of various clients for this web development and technical support company.  Worked with HTML/CSS/JavaScript as well as PHP or ASP.net languages.  Wrote code regarded commercial transactions using authorize.net. </p>
+			<ul> <li> <strong> Geek Group </strong>, Philadelphia, PA <a href="http://www.geekgroup.com/" target="_blank"> http://www.geekgroup.com </a></li>
+			</ul>
+		</div>
+		<div class="experience">
+			<h3 class="pullleft"> Freelance Web Developer and Consultant </h3><h4 class="pullright">November 2012-Present</h4>
 			<p> Contract consultant for the websites of businesses and non-profits utilizing HTML5/CSS3, Adobe Dreamweaver or <a href="http://www.wix.com">Wix.com</a>. Conducted initial interviews followed through a full website implementation. Designed and developed websites as well as assisted in written and graphic content creation.   Handled domain and hosting requirements. </p>
 			<ul> <li> <strong> API Resources</strong>, Philadelphia, PA <a href="http://www.apiresources.com/" target="_blank"> http://www.apiresources.com </a></li>
 				<li> <strong> InsideOut Home Solutions</strong>, Philadelphia, PA <a href="http://www.insideouthome.biz" target="_blank"> http://www.insideouthome.biz </a></li>
@@ -445,19 +485,9 @@
 			</ul>
 		</div>
 		<div class="experience">
-			<h3 class="pullleft">Database Architect and Administrator, IT Consultant</h3><h4 class="pullright">Feburary 2012-Present</h4>
+			<h3 class="pullleft">Database Architect and Administrator, IT Consultant</h3><h4 class="pullright">Feburary 2012-June 2016</h4>
 			<p> Constructed and administered to determine workflow process and database requirements.  Resolved IT technical problems with e-mail, Internet, cell phones, file sharing, hosting services.  Provide staff database training for a staff of 10+ as well as technical support by phone, e-mail and through desktop sharing software, Teamviewer.</p>
 			<ul> <li> <strong>Studio Twist</strong>, Kennesaw GA <a href="http://www.studiotwist.net" target="_blank">http://www.studiotwist.net</a></li></ul>
-		</div>
-		<div class="experience">
-			<h3 class="pullleft">IT Contractor</h3><h4 class="pullright">December 2011 - Feburary 2012</h4>
-			<p>Completed an extensive equipment and account documentation project on time and on budget for this large Durable Medical Equipment Company utilizing Visio, Excel and Microsoft SharePoint.  Required traveling to different branches and working with acquired companies.</p>
-			<ul><li><strong>Landauer Metropolitan</strong>, Philadelphia PA</li></ul>
-		</div>
-		<div class="experience">
-			<h3 class="pullleft">Docket Clerk</h3><h4 class="pullright">Feburary 2008 - August 2009</h4>
-			<p> Managed a centralized calendaring system for this large, multi-state law firm with precise attention to detail.   Processed docket request and calculated legal deadlines for over four hundred attorneys.  Provided training and orientations to staff on the usage of the software.  My responsibilities concerned liability and risk for the company.  </p>
-			<ul><li><strong>Blank Rome, L.L.P.</strong>, Philadelphia PA <a href="http://www.blankrome.com" target="_blank">http://www.blankrome.com</a></li></ul>
 		</div>
 		<h2>Education</h2>
 		<div id="educationwrap">
