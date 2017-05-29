@@ -202,21 +202,10 @@ header h1 {
 
 section {
 	margin: 0px;
-	padding: 2em 0;
+	padding: 2em 0 2.8em;
 	overflow: auto;
 	
 	
-}
-
-section h2 {
-	font-size: 1.5em;
-	text-align: center;
-	margin: 0;
-}
-
-section h3 {
-	width: 92%;
-	margin: 0 auto;
 }
 
 section p {
@@ -422,29 +411,42 @@ section p {
 }
 
 .example {
-	width: 90%;
+	width: 84%;
 	
 	margin: 0 auto;
 	padding-bottom: 2em;
 
 	clear: both;
+	overflow: auto;
 }
 
 .example h4 {
-	
+
 }
 
 .example p {
 }
 
-.example img {
-	display: block;
-	width: 80%;
-	max-height: 300px;
+
+.example-picture a {
+    display: block;
+    width: 80%;
+    margin: 0px auto 20px;
+    max-height: 300px;
 	max-width: 300px;
-	
-	margin: 0 auto;
-	padding: 1em;
+}
+
+.example img {
+    width: 100%;
+}
+
+.portfolio-buttons {
+    text-align: center;
+}
+
+.portfolio-buttons form {
+    display: inline-block;
+    margin: 0px 10px;
 }
 
 .example form {
@@ -468,6 +470,7 @@ section p {
 	margin-bottom: 1em;
 }
 .experience {
+	margin-bottom: 40px;
 }
 
 .experience p {
@@ -476,6 +479,7 @@ section p {
 
 .experience h3 {
 	margin: 0 0.8em;
+	width: 70%;
 }
 .experience h4 {
 	margin: 0 1em;
@@ -493,8 +497,11 @@ section p {
 #educationwrap {
 	width: 98%;
 	margin: 0 auto;
+	overflow: auto;
 }
+
 .education {
+	width: 50%;
 	padding-bottom: 0.7em;
 }
 
@@ -711,13 +718,13 @@ footer img {
 		margin-right: 5%;
 	}
 	
-	.example div:first-of-type {
-		width: 50%;
+	.example-description {
+		width: 60%;
 		float: left;
 	}
 	
-	.example div:last-of-type {
-		width: 50%;
+	.example-picture {
+		width: 40%;
 		float: right;
 	}
 	
