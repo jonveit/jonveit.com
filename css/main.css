@@ -164,48 +164,10 @@ a:focus {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1);
 }
 
-.vertical-align {
-	display: inline-block;
-	vertical-align: middle;
-	border: 1px solid black;
-}
-
-header {
-	position: fixed;
-	top: 0;
-	background-color: rgba(76,120,107,0.95);
-	height: auto;
-	width: 100%;
-	overflow: auto;
-}
-
-header img {
-	float: left;
-	height: 2em;
-	padding: 1em;
-}
-
-header h1 {
-	
-	display: block;
-	
-	float: left;
-	
-	width: auto;
-	
-	
-	
-	font-size: 1.6em;
-	
-	color: #FFF;
-}
-
 section {
 	margin: 0px;
 	padding: 2em 0 2.8em;
 	overflow: auto;
-	
-	
 }
 
 section p {
@@ -218,12 +180,12 @@ section p {
 	display: block;
 
 	float: right;
-	
+
 	width: 32px;
 	height: 32px;
-	
+
 	margin: 1em;
-	
+
 	background-image: url("../img/navicon.png");
 	border: none;
 }
@@ -623,31 +585,6 @@ footer img {
 	
 	#offcanvas {
 		display: none;
-	}
-	
-	h2 {
-		margin-left: 2em;
-	}
-	
-	nav {
-		position: relative;
-		display: block;
-		float: right;
-		margin-right: 1em;
-		font-size: 0.8em;
-	}
-	
-	nav li {
-		float: left;
-	}
-	
-	nav a {
-		text-decoration: none;
-		display: block;
-		padding: 1em;
-		color: rgba(255,255,255,0.7);
-		height: 100%;
-		margin-top: -0.4em;
 	}
 	
 	nav a:hover,

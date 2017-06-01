@@ -20,6 +20,7 @@
     }
 
     .innerwrap {
+        height: 100%;
         max-width: 960px;
         margin: 0 auto;
     }
@@ -78,42 +79,60 @@
         border: 1px solid black;
     }
 
+    .vertical-center-text {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        line-height: 0px;
+    }
+
     header {
         position: fixed;
         top: 0;
         background-color: rgba(76,120,107,0.95);
-        height: auto;
+        height: 72px;
         width: 100%;
-        overflow: auto;
+        overflow: hidden;
+    }
+
+    #headerlogo {
+        float: left;
+        display: inline-block;
+        height: 100%;
+    }
+
+    header a {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        box-sizing: border-box;
+        margin: 0;
     }
 
     header img {
-        float: left;
-        height: 2em;
-        padding: 1em;
+        display: inline-block;
+        vertical-align: baseline;
+        height: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0.7em;
     }
 
     header h1 {
-
-        display: block;
-
-        float: left;
-
-        width: auto;
-
-
-
+        position: absolute;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100px;
+        margin: 0;
         font-size: 1.6em;
-
         color: #FFF;
+        top: 50%;
+        transform: translate(0, -50%) }
     }
 
     section {
         margin: 0px;
         padding: 2em 0;
         overflow: auto;
-
-
     }
 
     section h2 {
@@ -242,21 +261,28 @@
         position: relative;
         display: block;
         float: right;
-        margin-right: 1em;
+        height: 100%;
         font-size: 0.8em;
     }
 
+    nav ul {
+        height: 100%;
+        margin: 0;
+    }
+
     nav li {
-        float: left;
+        display: inline-block;
+        height: 100%;
     }
 
     nav a {
         text-decoration: none;
         display: block;
-        padding: 1em;
         color: rgba(255,255,255,0.7);
         height: 100%;
-        margin-top: -0.4em;
+        box-sizing: border-box;
+        padding: 10px;
+        line-height: 52px;
     }
 
     nav a:hover,
@@ -327,7 +353,9 @@
     
     <header id="top">
         <div class="innerwrap">
-            <a href="/"><img src="img/logos/logo.png" alt="website logo" /><h1>Jon Veit</h1></a>
+            <a href="/" id="#headerlogo">
+                <img src="img/logos/logo.png" alt="website logo" /><h1>Jon Veit</h1>
+            </a>
             <nav id="menu">
                 <ul>
                     <li><a href="#banner">Home</a></li>
